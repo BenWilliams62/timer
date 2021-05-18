@@ -5,3 +5,6 @@ This web app is a simple timer/clock. It is a personal project to track my time 
 
 ## How to use
 If you also want to run this app, clone this repository, install all the dependencies (npm install), then either run it for development (npm start) or build for deployment (npm run build).
+
+## Tools
+- React
