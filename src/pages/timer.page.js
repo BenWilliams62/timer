@@ -52,7 +52,7 @@ export default function Timer()
                         {
                             setWorking("brief");
                             setTensMins(Math.floor(brief/10));
-                            setMins(brief - Math.floor((brief/10)));
+                            setMins(brief - Math.floor((brief/10))*10);
                         }
                         else if (working === "brief")
                         {
@@ -61,7 +61,7 @@ export default function Timer()
                                 setRepetitions(repetitions - 1);
                                 setWorking("rest");
                                 setTensMins(Math.floor(rest/10));
-                                setMins(rest - Math.floor((rest/10)));
+                                setMins(rest - Math.floor((rest/10))*10);
                             }
                             else
                             {
@@ -73,7 +73,7 @@ export default function Timer()
                         {
                             setWorking("work")
                             setTensMins(Math.floor(work/10));
-                            setMins(work - Math.floor((work/10)));
+                            setMins(work - Math.floor((work/10))*10);
                         };
                         setTensSecs(0);
                         setSecs(0);
