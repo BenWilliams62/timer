@@ -15,14 +15,32 @@ export default function Clock()
 
     // change time to mins and secs
     const changeTime = () => {
-        let d = new Date();
+        setSecs(0)
+        let d = new Date()
         let h = d.getHours();
         let m = d.getMinutes();
-        setTensMins(Math.floor(h/10));
-        setMins(h - (10 * tensMins));
-        setTensSecs(Math.floor(m/10));
-        setSecs(m - (10 * tensSecs));
+        if (h < 10)
+        {
+            setTensMins("0");
+            setMins(h.toString())
+        }
+        else
+        {
+            setTensMins(h.toString().substring(0,1));
+            setMins(h.toString().substring(1));
+        };
+        if (m < 10)
+        {
+            setTensSecs("0");
+            setSecs(m.toString())
+        }
+        else
+        {
+            setTensSecs(m.toString().substring(0,1));
+            setSecs(m.toString().substring(1));
+        };
     };
+
 
     useEffect(() => {
         const timer = setTimeout(() => {
